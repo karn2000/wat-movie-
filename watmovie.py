@@ -11,6 +11,8 @@ e.focus_set()
 e.delete(0, END)
 e.insert(0, "")
 
+ment = StringVar()
+
 OPTIONS = ['All', 'Comedy', 'Drama', 'Action', 'Sci-fi']
     
 variable = StringVar(root)
