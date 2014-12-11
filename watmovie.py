@@ -23,11 +23,10 @@ def d_movie(label2):
 
 def changelabel(before, after):
     before.config(text=after)
-    
 
 root = Tk()
 root.title('Wat Movie ??')
-root.geometry('300x300')
+root.geometry('500x500')
 root.resizable(0, 0)
 
 l_option = ['All', 'Comedy', 'Drama', 'Action', 'Sci-fi']
@@ -42,6 +41,9 @@ m_entry = Entry(root, textvariable = ment).pack()
 m_search = Button(root, text = 'SEARCH', command = lambda : d_movie(label2)).pack()
 m_option = apply(OptionMenu,(root, option1) + tuple(l_option)).pack()
 label2.pack()
+
+photo = PhotoImage(file='imm.gif')
+label_pic = Label(root, image=photo).pack()
 
 
 root.mainloop()
