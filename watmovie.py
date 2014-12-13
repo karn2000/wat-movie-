@@ -8,18 +8,18 @@ def d_movie(label2):
     movie = ment.get()
     if len(movie) < 3:
         movie += '   '
-    movie_list = {'All':['com1','com2','drama1','drama2','act1','act2','sci1','sci2']\
+    movie_list = {'All':['interstellar','com1','com2','drama1','drama2','act1','act2','sci1','sci2']\
                       ,'Comedy':['com1','com2']\
                       ,'Drama' :['drama1','drama2']\
                       ,'Action':['act1','act2']\
-                      ,'Sci-fi':['sci1','sci2']}
+                      ,'Sci-fi':['sci1','sci2', 'interstellar']}
     check = 0
     movie_1 = ''
     for i in movie_list:
         if i == option1.get():
             for l in movie_list[i]:
                 if movie.lower() in l:
-                    movie_1 += l + '\n'
+                    movie_1 += l
                     check += 1
                     changelabel(label2, movie_1)
                     
@@ -31,6 +31,11 @@ def d_movie(label2):
 def changelabel(before, after):
     ''' change label when click search '''
     before.config(text=after)
+    movie = str(after + '.gif')
+    print movie
+    img = PhotoImage(file=movie)
+    label = Label(root, image=img).pack()
+
 
 def about_us():
     ''' open file => about_us.txt '''
