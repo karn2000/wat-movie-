@@ -46,7 +46,7 @@ option1.set(l_option[0])
 ment = StringVar()
 
 #label1 = Label(root, text='Search Movie and Choose Categories').place(relx=.5, rely=.1, anchor="c")
-label2 = Label(root, text = 'Movie', bg = 'black', fg = 'white', size = '15')
+label2 = Label(root, text = 'Movie', bg = 'black', fg = 'white', font = 15)
 
 m_entry = Entry(root, textvariable = ment).place(relx=.5, rely=.2, anchor="c")
 m_search = Button(root, text = 'SEARCH', command = lambda : d_movie(label2)).place(relx=.5, rely=.3, anchor="c")
