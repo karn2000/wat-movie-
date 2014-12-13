@@ -2,7 +2,7 @@ from Tkinter import *
 import random
 import os
 
-movie_list = ['the hobbit 3', 'interstellar', 'not found']
+movie_list = ['night at the museum secret of the tomb', 'gone girl', 'step up 5', 'begin again', 'brick mansions', 'transcendence', 'oculus', 'mr. peabody and sherman', 'robocop', '300 rise of an empire', 'godzilla', 'the amazing spider-man 2', 'sex tape', 'captain america the winter soldier', 'neighbors', 'whiplash', 'how to train your dragon 2', 'transformers age of extinction', 'edge of tomorrow', 'the fault in our stars', 'dracula untold', 'the lego movie', 'john wick', 'hercules', '22 jump street', 'x-men: days of future past', 'maleficent', 'boyhood', 'lucy', 'the babadook', 'divergent', 'dawn of the planet of the apes', 'the expendables 3', 'annie', 'teenage mutant ninja turtles', 'into the woods', 'dumb and dumber to', 'big hero 6', 'nightcrawler', 'penguins of madagascar,guardians of the galaxy', 'fury', 'the hunger games mockingjay - part 1', 'interstellar', 'the maze runner', 'exodus gods and kings', 'horrible bosses 2']
 random = (random.choice(movie_list))
 random_gif = random+'.gif'
 
