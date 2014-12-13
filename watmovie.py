@@ -9,12 +9,11 @@ def d_movie(label2, ment, option1):
     movie = ment.get()
     if len(movie) < 3 or movie == 'the':
         movie += '   '
-    movie_list = {'All':['com1','com2','drama1','drama2','act1','act2','sci1','sci2', 'interstellar', 'The hobbit 3']\
-                      ,'Comedy':['com1','com2']\
-                      ,'Drama' :['drama1','drama2']\
-                      ,'Action':['act1','act2']\
-                      ,'Advanture':['the hobbit 3']\
-                      ,'Sci-fi':['sci1','sci2', 'interstellar']}
+    movie_list = {'All':['Night at The Museum Secret of The Tomb','Gone girl','Step Up 5','Begin Again','Brick Mansions','Transcendence','Oculus','Mr. Peabody and Sherman','Robocop','300 Rise of an Empire','Godzilla','The Amazing Spider-Man 2','Sex Tape','Captain America The Winter Soldier','Neighbors','Whiplash','How to Train Your Dragon 2','Transformers Age of Extinction','Edge of Tomorrow','The Fault in Our Stars','Dracula Untold','The Lego Movie','John Wick','Hercules','22 Jump Street','X-Men: Days of Future Past','Maleficent','Boyhood','Lucy','The Babadook','Divergent','Dawn of the Planet of the Apes','The Expendables 3','Annie','Teenage Mutant Ninja Turtles','Into the Woods','Dumb and Dumber To','Big Hero 6','Nightcrawler','Penguins of Madagascar,''Guardians of the Galaxy','Fury','The Hunger Games Mockingjay - Part 1','Interstellar','The Maze Runner','Exodus Gods and Kings','Horrible Bosses 2']\
+                      ,'Comedy':['Step Up 5','Mr. Peabody and Sherman','Sex Tape','Neighbors','How to Train Your Dragon 2','The Lego Movie','22 Jump Street','Boyhood','Annie','Teenage Mutant Ninja Turtles','Into the Woods','Dumb and Dumber To','Horrible Bosses 2','Penguins of Madagascar','Big Hero 6','Night at The Museum Secret of The Tomb']\
+                      ,'Drama' :['Transcendence','Oculus','300: Rise of an Empire','Whiplash','The Fault in Our Stars','Dracula Untold','The Babadook','Dawn of the Planet of the Apes','Annie','Gone Girl','Exodus: Gods and Kings','Fury','Nightcrawler','Begin Again']\
+                      ,'Sci-fi':['Transcendence','Robocop','Godzilla','Captain America The Winter Soldier','Transformers Age of Extinction','Edge of Tomorrow','X-Men: Days of Future Past','Lucy','Divergent','Teenage Mutant Ninja Turtles','Guardians of the Galaxy ','The Hunger Games Mockingjay - Part 1', 'Interstellar','Big Hero 6']\
+                      ,'Action':['Night at The Museum Secret of The Tomb','Brick Mansions','Transcendence','300 Rise of an Empire','Godzilla','The Amazing Spider-Man 2','Captain America The Winter Soldier','How to Train Your Dragon 2','Transformers: Age of Extinction','Edge of Tomorrow','The Lego Movie','John Wick','Hercules','22 Jump Street','X-Men: Days of Future Past','Maleficent','Lucy','Divergent','Dawn of the Planet of the Apes','The Expendables 3','Teenage Mutant Ninja Turtles','Big Hero 6','Guardians of the Galaxy','The Maze Runner','Exodus Gods and Kings','Fury']}
     check = 0
     movie_1 = ''
     for i in movie_list:
@@ -40,6 +39,7 @@ def changelabel(before, after):
     ooo = PhotoImage(file = movie)
     label = Label(image=ooo).place(relx=.69, rely=.57)
     pic(ooo)
+    pic2(ooo)
 
 def about_us():
     ''' open file => about_us.txt '''
@@ -74,7 +74,7 @@ class main(object):
         label_pic = Label(self.root, image=photo).place(relx=.5, rely=.14, anchor="n")
 
         # category
-        l_option = ['All', 'Advanture', 'Action', 'Comedy', 'Drama', 'Sci-fi']
+        l_option = ['All', 'Action', 'Comedy', 'Drama', 'Sci-fi']
         option1 = StringVar()
         option1.set(l_option[0])
         ment = StringVar()
