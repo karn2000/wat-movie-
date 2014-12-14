@@ -1,16 +1,22 @@
+'''mini game'''
 from Tkinter import *
 import random
 import os
+import tkMessageBox
 
 movie_list = ['night at the museum secret of the tomb', 'gone girl', 'step up 5', 'begin again', 'brick mansions', 'transcendence', 'oculus', 'mr. peabody and sherman', 'robocop', '300 rise of an empire', 'godzilla', 'the amazing spider-man 2', 'sex tape', 'captain america the winter soldier', 'neighbors', 'whiplash', 'how to train your dragon 2', 'transformers age of extinction', 'edge of tomorrow', 'the fault in our stars', 'dracula untold', 'the lego movie', 'john wick', 'hercules', '22 jump street', 'x-men: days of future past', 'maleficent', 'boyhood', 'lucy', 'the babadook', 'divergent', 'dawn of the planet of the apes', 'the expendables 3', 'annie', 'teenage mutant ninja turtles', 'into the woods', 'dumb and dumber to', 'big hero 6', 'nightcrawler', 'penguins of madagascar,guardians of the galaxy', 'fury', 'the hunger games mockingjay - part 1', 'interstellar', 'the maze runner', 'exodus gods and kings', 'horrible bosses 2']
 random = (random.choice(movie_list))
 random_gif = random+'.gif'
 
-def mnext():
-    os.startfile('minigame.pyw')
+def next_q(text):
+    ''' next question '''
+    mnext_t = tkMessageBox.askyesno(title=text,message= 'Next Question')
+    if mnext_t > 0:
+        os.startfile('minigame.pyw')
     m_gui.destroy()
-    
+
 def d_random(label_2, random, label_3):
+    ''' random movie '''
     enter = ment.get()
     answer = random
     if len(enter) < 4:
@@ -27,13 +33,20 @@ def changelabel(before, after, before2):
     movie = random_gif
     before2.config(text = random)
     ooo = PhotoImage(file = movie)
-    label = Label(image=ooo).place(relx=.35, rely=.6)
-    pic(ooo)
-
+    label = Label(m_gui, image=ooo).place(relx=.35, rely=.6)
+    next_q(after)
+    
 def mquit():
     ''' close app '''
     mexit = tkMessageBox.askyesno(title='Quit',message='Are you Sure')
     if mexit > 0:
+        m_gui.destroy()
+
+def mnext():
+    ''' nexr question '''
+    mnext = tkMessageBox.askyesno(title='Next',message='Are you Sure')
+    if mnext > 0:
+        os.startfile('minigame.pyw')
         m_gui.destroy()
 
 m_gui = Tk()

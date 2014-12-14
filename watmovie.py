@@ -39,7 +39,6 @@ def changelabel(before, after):
     ooo = PhotoImage(file = movie)
     label = Label(image=ooo).place(relx=.69, rely=.57)
     pic(ooo)
-
 def about_us():
     ''' open file => about_us.txt '''
     os.startfile('about_us.txt')
@@ -47,12 +46,6 @@ def about_us():
 def wmhelp():
     ''' open file => help.txt. '''
     os.startfile('help.txt')
-
-def mquit():
-    ''' close app '''
-    mexit = tkMessageBox.askyesno(title='Quit',message='Are you Sure')
-    if mexit > 0:
-        root.destroy()
 
 def openmini():
     os.startfile('minigame.pyw')
@@ -97,11 +90,15 @@ class main(object):
         helpmenu.add_command(label='About Us',command=about_us)
         menubar.add_cascade(label='Help',menu=helpmenu)
 
-        quit_button = Button(self.root, text = 'Close',bg = 'pink',font=15, command = mquit)
+        quit_button = Button(self.root, text = 'Close',bg = 'pink',font=15, command = self.mquit)
         quit_button.place(relx=.1, rely=.9, anchor='c')
 
         self.root.config(menu=menubar)
         self.root.mainloop()
-
+    def mquit(self):
+        ''' close app '''
+        mexit = tkMessageBox.askyesno(title='Quit',message='Are you Sure')
+        if mexit > 0:
+            self.root.destroy()
 
 main()
