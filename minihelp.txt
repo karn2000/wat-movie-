@@ -1,0 +1,5 @@
+game:
+	random movie and you enter your answer in entrybox
+	your answer > 4 letters
+	click enter
+	show correct answer and full picture

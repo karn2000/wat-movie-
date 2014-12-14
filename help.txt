@@ -1,1 +1,10 @@
 how to ..
+
+search:
+	search movie in entrybox 
+	can chose category
+	movie search > 3 letters
+
+minigame:
+	click to play 
+	can read how to play on help menubar

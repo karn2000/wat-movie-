@@ -47,6 +47,10 @@ def wmhelp():
     ''' open file => help.txt. '''
     os.startfile('help.txt')
 
+def minihelp():
+    ''' open file => help.txt. '''
+    os.startfile('minihelp.txt')
+
 def openmini():
     os.startfile('minigame.pyw')
 
@@ -87,6 +91,7 @@ class main(object):
         # help menu
         helpmenu = Menu(menubar,tearoff=0)
         helpmenu.add_command(label='View Help', command=wmhelp)
+        helpmenu.add_command(label='Mini Game Help', command=minihelp)
         helpmenu.add_command(label='About Us',command=about_us)
         menubar.add_cascade(label='Help',menu=helpmenu)
 
