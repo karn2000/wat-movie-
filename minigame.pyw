@@ -6,7 +6,7 @@ import tkMessageBox
 
 movie_list = ['night at the museum secret of the tomb', 'gone girl', 'step up 5', 'begin again', 'brick mansions', 'transcendence', 'oculus', 'mr. peabody and sherman', 'robocop', '300 rise of an empire', 'godzilla', 'the amazing spider-man 2', 'sex tape', 'captain america the winter soldier', 'neighbors', 'whiplash', 'how to train your dragon 2', 'transformers age of extinction', 'edge of tomorrow', 'the fault in our stars', 'dracula untold', 'the lego movie', 'john wick', 'hercules', '22 jump street', 'x-men: days of future past', 'maleficent', 'boyhood', 'lucy', 'the babadook', 'divergent', 'dawn of the planet of the apes', 'the expendables 3', 'annie', 'teenage mutant ninja turtles', 'into the woods', 'dumb and dumber to', 'big hero 6', 'nightcrawler', 'penguins of madagascar,guardians of the galaxy', 'fury', 'the hunger games mockingjay - part 1', 'interstellar', 'the maze runner', 'exodus gods and kings', 'horrible bosses 2']
 random = (random.choice(movie_list))
-random_gif = random+'.gif'
+random_gif = 'pic/' + random+'.gif'
 
 def next_q(text):
     ''' next question '''
@@ -55,10 +55,10 @@ m_gui.geometry('500x600')
 m_gui.resizable(0, 0)
 ment = StringVar()
 
-top = PhotoImage(file = 'top.gif')
+top = PhotoImage(file = 'pic/top.gif')
 labeltop = Label(m_gui, image=top).pack()
 
-photo = PhotoImage(file='bg2.gif')
+photo = PhotoImage(file='pic/bg2.gif')
 label_pic = Label(m_gui, image=photo).place(relx=.5, rely=.14, anchor="n")
 
 pic = PhotoImage(file = random_gif)
