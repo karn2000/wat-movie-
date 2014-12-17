@@ -35,9 +35,9 @@ def d_movie(label2, ment, option1):
 def changelabel(before, after):
     ''' change label when click search '''
     before.config(text=after.capitalize())
-    movie = after.lower()+'.gif'
+    movie = 'pic/'+after.lower()+'.gif'
     ooo = PhotoImage(file = movie)
-    label = Label(image=ooo).place(relx=.69, rely=.57)
+    label = Label(image=ooo).place(relx=.69, rely=.63)
     pic(ooo)
 def about_us():
     ''' open file => about_us.txt '''
@@ -58,15 +58,15 @@ class main(object):
     def __init__(self):
         self.root = Tk()
         self.root.title('Wat Movie ??')
-        self.root.geometry('500x500')
+        self.root.geometry('500x600')
         self.root.resizable(0, 0)
 
         # logo
-        top = PhotoImage(file = 'top.gif')
+        top = PhotoImage(file = 'pic/top.gif')
         labeltop = Label(self.root, image=top).pack()
 
         # background
-        photo = PhotoImage(file='bg2.gif')
+        photo = PhotoImage(file='pic/bg2.gif')
         label_pic = Label(self.root, image=photo).place(relx=.5, rely=.14, anchor="n")
 
         # category
